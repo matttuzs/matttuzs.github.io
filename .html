@@ -1,0 +1,384 @@
+
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOŠ technická Piešťany</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f5f9;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #102a43;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        header h2 {
+            color: #ffd166;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffd166;
+        }
+
+        .hero {
+            min-height: 440px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+            background:
+                linear-gradient(
+                    rgba(10, 30, 55, 0.78),
+                    rgba(10, 30, 55, 0.78)
+                ),
+                url("https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1600&q=80")
+                center/cover;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            margin-bottom: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #ffd166;
+            color: #102a43;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #ffbf3f;
+        }
+
+        section {
+            padding: 60px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #102a43;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .about {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit, minmax(230px, 1fr)
+            );
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 14px #00000012;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card h3 {
+            color: #102a43;
+            margin-bottom: 10px;
+        }
+
+        .advantages {
+            background: #102a43;
+            color: white;
+            text-align: center;
+        }
+
+        .advantages h2 {
+            color: #ffd166;
+        }
+
+        .advantages ul {
+            list-style: none;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .advantages li {
+            padding: 10px;
+            border-bottom: 1px solid #ffffff25;
+        }
+
+        .contact {
+            text-align: center;
+            background: white;
+        }
+
+        .contact a {
+            color: #1769aa;
+        }
+
+        footer {
+            background: #091b2d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 650px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 8px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>SOŠ TECHNICKÁ</h2>
+
+    <nav>
+        <a href="#domov">Domov</a>
+        <a href="#skola">O škole</a>
+        <a href="#odbory">Odbory</a>
+        <a href="#kontakt">Kontakt</a>
+    </nav>
+</header>
+
+<div class="hero" id="domov">
+    <div>
+        <h1>Stredná odborná škola technická</h1>
+        <p>Piešťany – vzdelanie pre tvoju budúcnosť</p>
+        <a href="#odbory" class="button">Pozrieť odbory</a>
+    </div>
+</div>
+
+<section id="skola">
+    <h2 class="section-title">O našej škole</h2>
+
+    <div class="about">
+        <p>
+            Stredná odborná škola technická v Piešťanoch
+            pripravuje žiakov na budúce povolanie v oblasti
+            elektrotechniky, strojárstva, automobilov a
+            počítačových sietí.
+        </p>
+
+        <p>
+            Dôležitou súčasťou vyučovania je odborný výcvik,
+            pri ktorom si žiaci rozvíjajú praktické zručnosti.
+            Škola ponúka odborné učebne a dielne, v ktorých
+            sa žiaci pripravujú na prácu v technických odboroch.
+        </p>
+    </div>
+</section>
+
+<section id="odbory">
+    <h2 class="section-title">Ponúkané odbory</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <img
+                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
+                alt="Počítače a počítačové siete">
+
+            <div class="card-content">
+                <h3>Mechanik počítačových sietí</h3>
+                <p>
+                    Počítače, sieťové zariadenia, konfigurácia
+                    sietí a základy správy IT.
+                </p>
+                <p><b>Štúdium:</b> 4 roky s maturitou</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img
+                src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80"
+                alt="Elektrotechnická práca">
+
+            <div class="card-content">
+                <h3>Mechanik elektrotechnik</h3>
+                <p>
+                    Elektrické obvody, elektroinštalácie,
+                    meranie a opravy elektrických zariadení.
+                </p>
+                <p><b>Štúdium:</b> 4 roky s maturitou</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img
+                src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=800&q=80"
+                alt="Strojárska výroba">
+
+            <div class="card-content">
+                <h3>Mechanik strojov a zariadení</h3>
+                <p>
+                    Konštrukcia, údržba a opravy strojov
+                    a technických zariadení.
+                </p>
+                <p><b>Štúdium:</b> 4 roky s maturitou</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img
+                src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80"
+                alt="Autoservis">
+
+            <div class="card-content">
+                <h3>Autoopravár – mechanik</h3>
+                <p>
+                    Diagnostika, údržba a opravy osobných
+                    automobilov.
+                </p>
+                <p><b>Štúdium:</b> 3 roky</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img
+                src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=800&q=80"
+                alt="Technická dielňa">
+
+            <div class="card-content">
+                <h3>Programátor CNC strojov</h3>
+                <p>
+                    Programovanie a obsluha počítačom
+                    riadených výrobných strojov.
+                </p>
+                <p><b>Štúdium:</b> 4 roky s maturitou</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img
+                src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=800&q=80"
+                alt="Oprava technického zariadenia">
+
+            <div class="card-content">
+                <h3>Autoopravár – elektrikár</h3>
+                <p>
+                    Elektrické systémy automobilov,
+                    hľadanie porúch a diagnostika.
+                </p>
+                <p><b>Štúdium:</b> 3 roky</p>
+            </div>
+        </div>
+
+    </div>
+
+    <p style="text-align:center; margin-top:25px;">
+        <a href="https://sostpn.edupage.org/"
+           class="button" target="_blank">
+            Všetky informácie o odboroch
+        </a>
+    </p>
+</section>
+
+<section class="advantages">
+    <h2 class="section-title">Prečo si vybrať našu školu?</h2>
+
+    <ul>
+        <li>Praktické vyučovanie v odborných dielňach</li>
+        <li>Technické a počítačové zručnosti</li>
+        <li>Príprava na budúce zamestnanie</li>
+        <li>Možnosť odborného výcviku u zamestnávateľov</li>
+        <li>Možnosť pokračovať v ďalšom štúdiu</li>
+    </ul>
+</section>
+
+<section class="contact" id="kontakt">
+    <h2 class="section-title">Kontakt</h2>
+
+    <p><b>Stredná odborná škola technická</b></p>
+    <p>Nová 5245/9, 921 01 Piešťany</p>
+    <p>
+        Telefón:
+        <a href="tel:+421337965108">033/796 51 08</a>
+    </p>
+    <p>
+        E-mail:
+        <a href="mailto:riaditel@sostpn.sk">
+            riaditel@sostpn.sk
+        </a>
+    </p>
+    <p>
+        Web:
+        <a href="https://sostpn.edupage.org/" target="_blank">
+            sostpn.edupage.org
+        </a>
+    </p>
+</section>
+
+<footer>
+    <p>© 2026 SOŠ technická Piešťany | Školský projekt</p>
+</footer>
+
+</body>
+</html>
